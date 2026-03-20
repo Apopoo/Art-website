@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Game Jam 2025</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="/" class="header-logo">
+                        <img src="img/website/Apopo_logo.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#projet">Projet</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="./index.html#realisations">Retour</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="accueil" class="slider">
+                <img src="img/website/manette.jpg" class="slider-background">
+                <div class="slider-content">
+                    <h1>GameJam 2025</h1>
+                    <p>Jeu-vidéo - Platformer 2D</p>
+                </div>
+            </div>
+
+        <div id="projet" class="section">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>Projet</h2> 
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Premier Projet de jeu-vidéo 2D codé en Python et en équipe durant la Game Jam 2025 dans le cadre du festival de la technologie, vous pouvez retrouver ici les sprites ue j'ai réalisé durant le projet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galerie" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Galerie</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_4/Mouse animation.gif"><img src="img/Gallery_4/Mouse animation.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_4/Mouse frames.png"><img src="img/Gallery_4/Mouse frames.png"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_4/falling character.gif"><img src="img/Gallery_4/falling character.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_4/Fire animation.gif"><img src="img/Gallery_4/Fire animation.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_4/Butterfly animation.gif"><img src="img/Gallery_4/Butterfly animation.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_4/Cheminée2.gif"><img src="img/Gallery_4/Cheminée2.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_4/walking animation.gif"><img src="img/Gallery_4/walking animation.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_4/garden teste.png"><img src="img/Gallery_4/garden teste.png"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_4/House tyles.png"><img src="img/Gallery_4/House tyles.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="infos">
+            <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
+        </footer>
+     <!-- Lightbox / visualiseur plein écran -->
+        <div id="lightbox" class="hidden" aria-hidden="true">
+            <button class="lb-close" aria-label="Fermer">&times;</button>
+            <button class="lb-prev" aria-label="Précédent">&#10094;</button>
+            <div class="lb-content">
+                <img class="lb-image" src="" alt="">
+                <div class="lb-caption"></div>
+            </div>
+            <button class="lb-next" aria-label="Suivant">&#10095;</button>
+        </div>
+
+    <script src="js/app.js"></script>
+    </body>
+</html>

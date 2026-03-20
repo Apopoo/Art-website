@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Accueil - Portfolio</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=photo_camera" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+
+                    <!-- GROUPE GAUCHE -->
+                    <div class="left-group flex aligncenter">
+                        <a href="img/website/Apopo_logo.png" class="header-logo">
+                        <img src="img/website/Apopo_logo.png">
+                        </a>
+                        
+                        <ul class="header-menu-lang">
+                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
+                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- MENU PRINCIPAL -->
+                    <ul class="header-menu header-menu-main">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">About me</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+
+        <div id="accueil" class="slider">
+            <img src="img/website/slider.jpg" class="slider-background">
+            <div class="slider-content">
+                <h1>Apo</h1>
+                <p>The art museum space</p>
+            </div>
+        </div>
+
+        <div id="apropos" class="section dark">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>About me</h2>
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Bienvenue sur mon site web portfolio ! Mes passions dans la vie sont de dessiner et programmer, J'aime particulièrement coder des jeux et des programmes en C++ ainsi que de dessiner des bandes-dessinées et des animations 2D. <br>Mon objectif dans la vie est de devenir Game Developer ou Animatrice 2D dans le domaine du cinéma. <br> <br> Vous trouverez sur cette page mes compétences informatiques & diplômes ainsi que mes créations et travaux artistiques. N'ésitez-pas à cliquer sur les créations pour les voir en détail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="realisations" class="section">
+            <div class="boxed text-center">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEnElEQVR4nO1ZWYhcRRStmHELcWGG7lfnvNfTOg4uA6JxRFyiiKL4YRQVjaAgwQ8FI4JgcEHQjyRE/TKaIIKCYiSCiEFCMgmJ+QiKCuKGQYMbSoL5Mcs4o9Eod6ae3BSvuuv19Dzz0Qces9StW/fcuvfWZkwPPfRwTIHkKgAT8rOqMY/LsuwSkg8DeJPkxyR/JXmQ5D8kDwD4heQOAGsA3JUkST1g/LWuz9QH4LpZszpJkjMBPAvgZz1o5PcXyTEA5+b6hoeHTwSwyyOwO8uyk7tqeJZlKcnXSB7uwHD/eyfXS/LJgMzyrhlvrb1PhYb+9gkpaQdwxeDgIGq12nzpMzAwcIqbretJrgTwKckjzsNPiUy9Xh8C8LvSN6ZmYSJJkjNmZLhML8l1vuEAtpC80RjTV0Zfo9Ggtfbi/G+Sbyi9Hxlj5gL4QP1vXcfGA5gHYJtn/Ndpml5jugBr7QjJv53eI1IQHKnL85mSnwAuKq18dHT0eJIbPePflrBoY1QTwFaSh2SWAAyGZAGsVzO6wWt7a0azIFXGCxmJ2TkR/bZ6pMeK5Eierb1PcoFuT9P0AjULh8Ux0cZLiKjOYvwLsV4uSPQDAQLLlf53AzL/JTTJJ2Lt75M4Vx03+YnayssuuWNm4BMlc1ORjLX2KrduiMwdUdaTvEeXsaKpa+VlkXeeE5nNoRyg0tHf339qq0QvlcSuVueGrQjIRHm5FUjuUY4KJnopuMTJlU42m83Ti+RivdyGwMZ2jioNAI8qAu+ZWUSaprfHbDkAfCOLWyyBDarjvZ3U9hKYUxCKIRKjsQS+zTvlq2KZ2l4W1trzYghEr/y6MsimrGxtn2HOfa7bJITVeIuiFAL4M+80MjJyQjerTmC8hYrAztA2g+TiKIUk9xbNQDeqThGstTcoIzd7BF5VbUtiCexQne40s4w0vhItjVII4DHV6UM5884mAZJLIgksi1JYr9cTkuNdX2ACAPBgJIGp01sU/POp25cvkJNZrVaz8ru19m4Az7nDzh4Af8gBX24myuxbADyuxlrptS1TNjxTxjFzvRJW6hMy1tpbI521IrRdlrhXOl8sQ8BICSX5sj4TlPwO6irWgsDzysiHQvkhFcl0ArllIPk6yR/Fs67MfilXIhKX1trbZDWVszPJC0l+FQqJgP5XirYujsBi1bbeVAEAt6hBd0fIP60IX6bbZPWtamPpn+YOFS2GLa5s7i/aKrhjbU5gm6kKALbnA8cmcxHSNL3UW5OqgcS+CotVEbd94+7a5KgbjyzLzld6vjBVAcDNauD328juUrIN3dZoNM5Sbd+ZquBW8/z+c3JoaOi0kCynr+KnjJR+uk3yRxHYa6qExKwa/JEWchMqzufpNrmp6Pb5o9NN2rhfIovOH8Y798rbgNZhKkYfgM+UdydJrpaLqmazeZIi8JOSuTL0YiNH3aoJiAHn6BhX3778dYbkSzpRhYRsY9I0vZrkD6pttfk/4B4vdhaQeEDa5fFD4rvN5vC3rl18dQp5oZELYhdWm/RDH6Zfb0Ik9ksomWMddvreaa3bNEq+fC9baH9t6KGHHsxR+BdmSNfYkJuttwAAAABJRU5ErkJggg==" alt="paint-palette-with-brush">
+                <h2>Mes réalisations</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_1.html">
+                            <img src="img/website/Title_AW.png">
+                            <h3>[Animation 2D]
+                                <br>Across the Wish</h3>
+                        </a>
+                    </div>
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_2.html">
+                            <img src="img/website/Neon_flowers.jpg">
+                            <h3>[Animation 2D]
+                             <br> Neon Flowers</h3>
+                        </a>
+                    </div>
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_3.html">
+                            <img src="img/website/Eternal Night.jpg">
+                            <h3>[Jeu-vidéo] 
+                                <br>Eternal Night</h3>
+                        </a>
+                    </div>
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_4.html">
+                            <img src="img/website/manette.jpg">
+                            <h3>[Jeux-vidéo]
+                            <br> Game Jam </h3>
+                        </a>
+                    </div>
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_5.html">
+                            <img src="img/website/Ori Nibel.jpg">
+                            <h3>[Fanart]
+                            <br> Ori and the Blind Forest </h3>
+                        </a>
+                    </div>
+                    <div class="w32 wm47 realisation">
+                        <a href="./Gallery_6.html">
+                            <img src="img/website/Kirby friends.png">
+                            <h3>[Fanart]
+                            <br>Univers JV</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section dark">
+            <div id="contact" class="boxed text-center">
+                <h2>Contact</h2>
+                <!--form-->
+                <div class="form">
+                <form id="msg-form" action="https://formspree.io/f/mlgpnvyo" method="POST">
+                <label for="message">Un avis, une question, une idée ? <br>Envoyez ici un message anonyme !  :</label>
+                <textarea id="message" name="message" required maxlength="500" placeholder="Écrire ici..."></textarea>
+
+                <!-- Champ honeypot anti-bot -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" id="send-btn">Envoyer</button>
+                </form>
+
+                <script>
+                    const form = document.getElementById("msg-form");
+                    const btn = document.getElementById("send-btn");
+
+                    form.addEventListener("submit", async function(e) {
+                    e.preventDefault(); // Empêche la redirection Formspree
+
+                    btn.disabled = true;
+                    btn.textContent = "Envoi...";
+
+                    const data = new FormData(form);
+
+                    const response = await fetch(form.action, {
+                    method: "POST",
+                    body: data,
+                    headers: { "Accept": "application/json" }
+                    });
+
+                    if (response.ok) {
+                    btn.textContent = "Merci !";
+                    form.reset();
+                    } else {
+                    btn.disabled = false;
+                    btn.textContent = "Erreur";
+                    }
+                    });
+                </script>
+                </div>
+                <!--réseauw & contact-->
+                <div class="flex toColumn space-between mgap20">
+                    <div class="w32 wm100 contact">
+                        <a href="https://x.com/Cest_pas_Apo?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnSWRzDLM1c9-ouZsELzF-1yE7RJLVdpbbkBx05u01oTFNIbg05yN08tu18VM_aem_-qstMHA-2MQh_gZefebfNQ">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADRUlEQVR4nO2ZXWiOYRjHn3343JjZ5gD5ykoRRVhq9iEHcmCbjxxQOHNEQ0uRsTii1Up2wMGc4ECGUg4UilI25LtIPiMfs9d85Ounm/9jN827+13teW/t/R+97/+5ruu+/j33fd3X/dxBkEIKKfQYwAigDrgCdBA9OoBWYAdQ0FMRS4AY/qAdqOqJiO8KcAwoAbKCiAFkAaVAs3L5BlQmMp3CN7Ep8ARAjXJ6C+S7ONSFbyLwDMAJ5bbdxfiqjEsCzwCUKbdWF+N3Ms4OPAMwRLnFXIx/IvAUuObXp4QA9d3U/FUJJDYcuCu/hqiFDACuxRFi1lmhw1j9gDPyOQVkRipEdpOBj9o4F1j8YYW4AGTE8U8DmmR7A8hJ2hoBNsr8KZAnbhjwUPyWOL5bZfMMGOMyXm8KSbemxu8NFJirduILMLsLv6V6kx+AWS5j9aoQ2Y8CXstttcXvEXfP3pOAmcB7Ca1wHafXhchnsdV2F1oFIewS9okbB7wQV53IGJEIkd9BuV4Mqw8wRQXBYCVwS78bE40fpZAc4IHct1n8ev7EaZcymzQh8i0GvmqRF1ll1iQfHo6cymxShch/l0LcN02euJHAK/Frexo7aiGZwCWF2W/xFeJMxZrkvRADk6gSNlhm8QfEtQD9g/9AyFirzL40U0t8tvYVg52+T62hwHWFeWNVqjQ9L1IxMEWh2NeqlQGcVIhzwGjguf6vs+xqxT0Ccn0Uslfut8METWesvuoTMNUqCGbjNGjySghQLVdTZif+9azRatcHiptgfXZa7oUQYKHmvGlH5nTxfDBwR6F3W/wacW2urTy9JQSYrmbRTJ8VcexmAJ/V9c6z+CPWmkpPihDt2I+7O0R1cZh6Yh3EcrXoDTZELkR7gvlKb3AoLK8OB7Gz8jlq8fOtgjAtMiEqs8dlet6cPboN3Ok7Xs3jv3ATGBSVkAarMUz43sJ8LiI+6iMRkkzQF4XEPP6IPVS5tbsYh5WoNPAMQLlya3ExNhePBs2BZ6CzIa11MS6wymNN4AmAzVY7k+fqVKVWAl13lSVjzfBr0y233oTJaVGiQSp18egL2hIWYYnJNxePOmOHV3JRIgZc1kHMbTqlkEIKQVf4AS4Y/ovQkay6AAAAAElFTkSuQmCC" alt="twitterx--v1">
+                        <span class="label">Compte X</span>
+                        <span class="value">@Cest_pas_Apo</span>
+                        </a>
+                    </div>
+                    <div class="w32 wm100 contact">
+                        <a href="
+                        https://www.instagram.com/apo_qui.dessine?igsh=MWx3dHhka3FlZW42Zg==">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVR4nO2ZS2sUQRCAZ13Xi7veXMn+CB9X8UFiBINgFJI/k5iDD6KyGrLJybN5rYKIv8GLSfCoMd6iK8ZbjMfFTxprtGxdp3seOwnOBwMLU1VdNVtV3VMTBAUFBf8PwAHgPDADrAMfgS7x6YoNY+sBcA4oZeX8ReAV2bMOXEjT8TJwl/7zEDiYhvPPLcM7wCwwCAwYmYT2B4AhoAV8sdZ6lsR+II5qFoCjsQ1Gr1cHlqw1Z5LkvOZG6h73ALhlrT0Up9vogl0I+ghQApatwnbvTtLOdM5nmTaXgQ/Ae2DESiddE2d8jJo+HzKblfMGcTxkK1AAc+re/cAVYC1O/gEVYFwKcQP4Kpf5vSj3Kh4BDKt7qz4BmN0xZMBR5xrwjmiMzFWlNyJBbAGXLJsNpdfxCUAfD8oOBX8Pf+4YXYd9IqTrE8BPHGRt5z8BE8AJ4LBcJ4FJufdbEEGKvngrSdpoVoDqP+RrQNvSGc0lAOCQlfMrLr1aevxjpbdpF3a/Ahi30qbnk+/xT2wr/bE8AtBnlgln47/0r7vs9FkG8FaJHY8RgCnskI08AthVYs7po/SrSn93PwZwROnv5BHAvk+hRSU2GSOAKaX/aC+00Zpn+nzOu41WrI2s7bGRPcl9IzOYU6WWlR22FvHktfPfgCu95DMPQGTNqVKzLZvUKWmVVfk9ZaWNYTpNX5Icp+0gojBPfjrL43ScF5pRyecoNqPSJo0XmiSvlGMyP3ojm525XptWKfcqHvaGlR8vfQIwg9aQVpATwLzyoxl3rGJGG/VMPf0LwDHruOI1VinJMClkKegj/FjfvCCFrHqP3c2I2yq+m5l5/Kfzt621B4M4WAMuZNxXzzht2taazSQGyzLixqqJOekQjRTG6w2xNW/lvOFpovF6zh84WomdtwI5Dbzog+NrsXPescDOmkGrdIZOCh/5OmKraVplZh/5CgoKgj3JdyvsHS0Y1nz2AAAAAElFTkSuQmCC" alt="instagram-new--v1">
+                        <span class="label">Instagram</span>
+                        <span class="value">@apo_qui.dessine</span>
+                        </a>
+                    </div>
+                    <div class="w32 wm100 contact">
+                        <div class="icons8-discord"></div>
+                        <span class="label">Discord</span>
+                        <span class="value">@apo1003</span> </div>
+                    </div>
+                </div>
+                    <footer id="infos">
+                        <br><br><br>&copy; Copyright 2026 Apo - All rights reserved. <br> Fanart; original characters and universes belong to their respective owners.
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr'
+            },    'google_translate_element');
+        }
+        </script>
+
+        https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit
+
+        <script>
+        // change la langue via le cookie
+        function changeLanguage(lang) {
+            var domain = window.location.hostname;
+
+            if (lang === 'fr') {
+                document.cookie = "googtrans=/fr/fr; path=/; domain=" + domain;
+                document.cookie = "googtrans=/fr/fr; path=/;";
+            } 
+            else if (lang === 'en') {
+                document.cookie = "googtrans=/fr/en; path=/; domain=" + domain;
+                document.cookie = "googtrans=/fr/en; path=/;";
+            }
+
+            // recharge la page pour appliquer
+            location.reload();
+        }
+        </script>
+
+    </body>
+
+    <script src="js/app.js"></script>
+</html>

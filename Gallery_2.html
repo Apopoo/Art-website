@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Neon flowers</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="/" class="header-logo">
+                        <img src="img/website/Apopo_logo.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#projet">Projet</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#video">Vidéo</a></li>
+                        <li><a href="./index.html#realisations">Retour</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="accueil" class="slider">
+                <img src="img/Gallery_2/fleur_jaune.jpg" class="slider-background">
+                <div class="slider-content">
+                    <h1>Neon flowers</h1>
+                    <p>Animation 2D</p>
+                </div>
+            </div>
+
+        <div id="projet" class="section">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>Projet</h2> 
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Neon flowers est un projet de vidéo Mapping commencé en fin 2024. Des fleurs néons et lumineuses dansent et changent leurs couleurs en fonction de la musique, créant des chorégraphies. La vidéo est projetée sur les murs d'une pièce pour un effet discothèque, soit aux murs extérieurs d'un bâtiment. Ce projet ambitieux est en cours de réalisation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galerie" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Galerie</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleur_jaune.jpg"><img src="img/Gallery_2/fleur_jaune.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleur_verte.jpg"><img src="img/Gallery_2/fleur_verte.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleur_bleue.jpg"><img src="img/Gallery_2/fleur_bleue.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleur_rouge.jpg"><img src="img/Gallery_2/fleur_rouge.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleur-prototype.jpg"><img src="img/Gallery_2/fleur-prototype.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_2/fleurs_multiples.jpg"><img src="img/Gallery_2/fleurs_multiples.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="video" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Vidéo d'animation</h2>
+                <div class="flex wrap gap20" style="justify-content: center;">
+                    <div style="max-width: 600px; position: relative;">
+                        <video id="myVideo" controls width="100%">
+                            <source src="img/Gallery_2/Dancing_flowers_demo.mp4" type="video/mp4">
+                        </video>
+                        <button class="video-play-btn" id="playBtn" onclick="document.getElementById('myVideo').play()">
+                            <span>▶</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <footer id="infos">
+                <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
+            </footer>
+        </div>
+        <!-- Lightbox / visualiseur plein écran -->
+        <div id="lightbox" class="hidden" aria-hidden="true">
+            <button class="lb-close" aria-label="Fermer">&times;</button>
+            <button class="lb-prev" aria-label="Précédent">&#10094;</button>
+            <div class="lb-content">
+                <img class="lb-image" src="" alt="">
+                <div class="lb-caption"></div>
+            </div>
+            <button class="lb-next" aria-label="Suivant">&#10095;</button>
+        </div>
+
+    <script src="js/app.js"></script>
+    </body>
+</html>

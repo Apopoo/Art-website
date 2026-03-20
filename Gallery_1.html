@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Acrossthewishgallery</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=palette" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+    <div>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="img/website/Apopo_logo.png" class="header-logo">
+                        <img src="img/website/Apopo_logo.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#projet">Projet</a></li>
+                        <li><a href="#animation">Animation</a></li>
+                        <li class="dropdown">
+                            <a href="#dessins">Dessins<span class="dropdown-arrow">▼</span></a>
+                            <ul class="submenu">
+                                <li><a href="#numérique">Numérique</a></li> 
+                                <li><a href="#croquis">Croquis-crayon</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="./index.html#realisations">Retour</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="accueil" class="slider">
+                <img src="img/Gallery_1/Title/Title_AW.png" class="slider-background">
+                <div class="slider-content">
+                    <h1>Across the Wish</h1>
+                    <p>Animation 2D</p>
+                </div>
+            </div>
+
+        <div id="projet" class="section">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>Projet</h2> 
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Alors que la galaxie perd de ses étoiles, Hoshi, un petit lapin stellaire, part en mission à travers l'espace pour ramener ces précieux astes et répandre leur magie. Ici, vous trouverez toutes les réalisations visuelles de ce projet de dessin animé en cours de création depuis 2023. N'hésitez pas à cliquer sur les images pour les voir de plus près !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="animation" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Animation</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-youpi.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-youpi.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-Intro.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-Intro.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi pirouette.gif"><img src="img/Gallery_1/Animation_gif/Hoshi pirouette.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-run.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-run.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-sad.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-sad.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-spin-infinite.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-spin-infinite.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Hoshi-vole-teste.gif"><img src="img/Gallery_1/Animation_gif/Hoshi-vole-teste.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Introduction-du-projet.gif"><img src="img/Gallery_1/Animation_gif/Introduction-du-projet.gif"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Animation_gif/Jumpingrabbit.gif"><img src="img/Gallery_1/Animation_gif/Jumpingrabbit.gif"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="video" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Vidéos d'animations</h2>
+                <div class="flex wrap gap20" style="justify-content: center;">
+                    <div style="max-width: 600px; position: relative;">
+                        <video id="myVideo1" controls width="100%">
+                            <source src="img/Gallery_1/Animation_vidéo/Hoshi Intro.mp4" type="video/mp4">
+                        </video>
+                        <button class="video-play-btn" id="playBtn1" onclick="document.getElementById('myVideo1').play()">
+                            <span>▶</span>
+                        </button>
+                    </div>
+                     <div style="max-width: 600px; position: relative;">
+                        <video id="myVideo2" controls width="100%">
+                            <source src="img/Gallery_1/Animation_vidéo/Introduction du projet.mp4" type="video/mp4">
+                        </video>
+                        <button class="video-play-btn" id="playBtn2" onclick="document.getElementById('myVideo2').play()">
+                            <span>▶</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dessins" class="section dark">
+                <div class="boxed text-center"> 
+                    <h2>Dessins</h2>
+                    <h2 id="numérique">Numérique</h2>
+                    <div class="flex wrap gap20 space-between">
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Title/Title_AW.png"><img src="img/Gallery_1/Title/Title_AW.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Hoshi_presentation.png"><img src="img/Gallery_1/Character/Numérique/Hoshi_presentation.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Hoshi_Artwork.png"><img src="img/Gallery_1/Character/Numérique/Hoshi_Artwork.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Hoshi_Fly.png"><img src="img/Gallery_1/Character/Numérique/Hoshi_Fly.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Hoshi_Dash.png"><img src="img/Gallery_1/Character/Numérique/Hoshi_Dash.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Tsuki.png"><img src="img/Gallery_1/Character/Numérique/Tsuki.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Nova_Artwork.png"><img src="img/Gallery_1/Character/Numérique/Nova_Artwork.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Silver_star.png"><img src="img/Gallery_1/Character/Numérique/Silver_star.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Leo.png"><img src="img/Gallery_1/Character/Numérique/Leo.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Cosmo_Artwork2.png"><img src="img/Gallery_1/Character/Numérique/Cosmo_Artwork2.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Yuki.png"><img src="img/Gallery_1/Character/Numérique/Yuki.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Jackalope.png"><img src="img/Gallery_1/Character/Numérique/Jackalope.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Heart_rabbit_concept.png"><img src="img/Gallery_1/Character/Numérique/Heart_rabbit_concept.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Heart_rabbit.png"><img src="img/Gallery_1/Character/Numérique/Heart_rabbit.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Lumi_Artwork.png"><img src="img/Gallery_1/Character/Numérique/Lumi_Artwork.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Lumi_Artwork2.png"><img src="img/Gallery_1/Character/Numérique/Lumi_Artwork2.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Stella_pose.png"><img src="img/Gallery_1/Character/Numérique/Stella_pose.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/Aurora.png"><img src="img/Gallery_1/Character/Numérique/Aurora.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="croquis" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Croquis-crayon</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi expressions_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi expressions_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi fly 1_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi fly 1_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi fly 2_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi fly 2_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi dash_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi dash_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi_fusain.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi_fusain.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Hoshi_croquis2.jpg"><img src="img/Gallery_1/Character/croquis/Hoshi_croquis2.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Moon_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Moon_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Page de croquis.jpg"><img src="img/Gallery_1/Character/croquis/Page de croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Lumi_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Lumi_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Lumi_croquis2.jpg"><img src="img/Gallery_1/Character/croquis/Lumi_croquis2.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Croquis/Cosmo_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Cosmo_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/croquis/Angora_Sunny_croquis.jpg"><img src="img/Gallery_1/Character/croquis/Angora_Sunny_croquis.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="documentation" class="section dark">
+                <div class="boxed text-center"> 
+                    <h2>Documentation</h2>
+                    <div class="flex wrap gap20 space-between">
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Dossier documentaire/Planche 1.jpg"><img src="img/Gallery_1/Dossier documentaire/Planche 1.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Dossier documentaire/Planche 2.jpg"><img src="img/Gallery_1/Dossier documentaire/Planche 2.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Dossier documentaire/Planche 3.jpg"><img src="img/Gallery_1/Dossier documentaire/Planche 3.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Dossier documentaire/Planche 4.jpg"><img src="img/Gallery_1/Dossier documentaire/Planche 4.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Promotion/Across the wish Nookbook.jpg"><img src="img/Gallery_1/Promotion/Across the wish Nookbook.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Title/Title_croquis.jpg"><img src="img/Gallery_1/Title/Title_croquis.jpg"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Title/Title_croquis_numérique.png"><img src="img/Gallery_1/Title/Title_croquis_numérique.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="infos">
+                    <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
+            </footer>
+        </div>
+    
+        <!-- Lightbox / visualiseur plein écran -->
+        <div id="lightbox" class="hidden" aria-hidden="true">
+            <button class="lb-close" aria-label="Fermer">&times;</button>
+            <button class="lb-prev" aria-label="Précédent">&#10094;</button>
+            <div class="lb-content">
+                <img class="lb-image" src="" alt="">
+                <div class="lb-caption"></div>
+            </div>
+            <button class="lb-next" aria-label="Suivant">&#10095;</button>
+        </div>
+
+    <script src="js/app.js"></script>
+    </body>
+</html>

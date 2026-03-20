@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Eternal Night</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="/" class="header-logo">
+                        <img src="img/website/Apopo_logo.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#projet">Projet</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="./index.html#realisations">Retour</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="accueil" class="slider">
+                <img src="img/Gallery_3/Eternal_Night.jpg" class="slider-background">
+                <div class="slider-content">
+                    <h1>Eternal Night</h1>
+                    <p>Jeu-vidéo - Platformer 2D</p>
+                </div>
+            </div>
+
+        <div id="projet" class="section">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>Projet</h2> 
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Mon premier projet jeu vidéo platformer 2D indépendant. Le joueur contrôle Nyx, une chauve-souris partie à la recherche du soleil qui a disparu de la forêt. Ce jeu, à la base créé en tant que petit film d'animation, a pour but d'inventer de nouvelles palettes de mouvements. Par exemple, Nyx peut planer au-dessus d'un précipice, grimper aux parois verticales du niveau et s'agripper à des branches horizontales suspendues dans le vide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galerie" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Galerie</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_3/Eternal_Night.jpg"><img src="img/Gallery_3/Eternal_Night.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_3/Nyx_croquis.jpg"><img src="img/Gallery_3/Nyx_croquis.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_3/Level concept.jpg"><img src="img/Gallery_3/Level concept.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_3/First_Nyx.jpg"><img src="img/Gallery_3/First_Nyx.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                    <a href="img/Gallery_3/Nyx_fly.jpg"><img src="img/Gallery_3/Nyx_fly.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_3/Nyx_sleep.jpg"><img src="img/Gallery_3/Nyx_sleep.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="infos">
+            <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
+        </footer>
+        
+        <!-- Lightbox / visualiseur plein écran -->
+        <div id="lightbox" class="hidden" aria-hidden="true">
+            <button class="lb-close" aria-label="Fermer">&times;</button>
+            <button class="lb-prev" aria-label="Précédent">&#10094;</button>
+            <div class="lb-content">
+                <img class="lb-image" src="" alt="">
+                <div class="lb-caption"></div>
+            </div>
+            <button class="lb-next" aria-label="Suivant">&#10095;</button>
+        </div>
+
+    <script src="js/app.js"></script>
+    </body>
+</html>
