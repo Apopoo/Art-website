@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Ori and the Blind Forest - Bubbleplace</title>
+        <title>Ori and the Blind Forest</title>
         <meta type="description" content="Voici mon portfolio" />
         <link rel="stylesheet" href="styles/styles.css" type="text/css">
+        <script src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script src="js/weglot-init.js"></script>
     </head>
+    <body>
         <header>
             <div class="boxed">
                 <div class="flex aligncenter space-between">
-                    <button onclick="openMenu()" class="header-menu-mobile">
-                        <span class="material-icons">menu</span>
-                    </button>
-                    <a href="/" class="header-logo">
+                    <!-- GROUPE GAUCHE -->
+                    <div class="left-group flex aligncenter">
+                        <a href="img/website/Apopo_logo.png" class="header-logo">
                         <img src="img/website/Apopo_logo.png">
-                    </a>
+                        </a>
+                        
+                        <ul class="header-menu-lang" aria-label="Sélecteur de langue">
+                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
+                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                        </ul>
+                    </div>
                     <ul class="header-menu header-menu-main">
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#projet">Projet</a></li>
@@ -25,7 +33,7 @@
                 </div>
             </div>
         </header>
-    <body>
+
 
         <div id="accueil" class="slider">
             <img src="img/Gallery_5/Ori_Nibel.jpg" class="slider-background">
