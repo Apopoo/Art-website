@@ -184,37 +184,50 @@
                 </div>
             </div>
         </div>
+        <!-- 1) Conteneur où Google injecte le sélecteur -->
         <div id="google_translate_element"></div>
 
-        <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'fr',
-                includedLanguages: 'en,fr'
-            },    'google_translate_element');
-        }
+        <!-- 2) Initialisation du widget -->
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'fr',          // langue originale de la page
+                    includedLanguages: 'fr,en',  // langues proposées
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
         </script>
 
-        <script>
-        // change la langue via le cookie
-        function changeLanguage(lang) {
-            var domain = window.location.hostname;
+        <!-- 3) Charger le script Google (IMPORTANT : dans une balise <script>) -->
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-            if (lang === 'fr') {
-                document.cookie = "googtrans=/fr/fr; path=/; domain=" + domain;
-                document.cookie = "googtrans=/fr/fr; path=/;";
-            } 
-            else if (lang === 'en') {
-                document.cookie = "googtrans=/fr/en; path=/; domain=" + domain;
-                document.cookie = "googtrans=/fr/en; path=/;";
+        <!-- 4) Logique pour changer la langue via cookie + écouteurs de clic -->
+        <script>
+            // change la langue via le cookie utilisé par le widget
+            function changeLanguage(lang) {
+                const domain = window.location.hostname;
+                // Écrit le cookie avec et sans attribut domain (utile selon l’hébergement)
+                if (lang === 'fr') {
+                    document.cookie = "googtrans=/fr/fr; path=/; domain=" + domain;
+                    document.cookie = "googtrans=/fr/fr; path=/;";
+                } else if (lang === 'en') {
+                    document.cookie = "googtrans=/fr/en; path=/; domain=" + domain;
+                    document.cookie = "googtrans=/fr/en; path=/;";
+                }
+                // Recharge pour que Google Translate relise le cookie
+                location.reload();
             }
 
-            // recharge la page pour appliquer
-            location.reload();
-        }
+            // Attacher les clics aux boutons (sinon rien ne se passe)
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.lang-btn').forEach(function (btn) {
+                    btn.addEventListener('click', function (e) {
+                        const lang = e.currentTarget.getAttribute('data-lang');
+                        changeLanguage(lang);
+                    });
+                });
+            });
         </script>
-
     </body>
-
     <script src="js/app.js"></script>
 </html>
