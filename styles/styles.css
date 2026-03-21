@@ -683,3 +683,47 @@ form {
     background-color: black;
     font-size: 0.8em;
 }
+
+
+.lang-btn.is-active,
+.lang-btn[aria-pressed="true"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+.weglot-container {
+  display: none !important;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container, .boxed, .section, header, footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+img, video, canvas, svg, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.flex > * {
+  min-width: 0;
+}
+
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }
+}
