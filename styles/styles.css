@@ -696,17 +696,41 @@ form {
   display: none !important;
 }
 
-
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  min-height: 100%;
 }
+
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }
+}
+
 
 .container, .boxed, .section, header, footer {
   width: 100%;
   max-width: 100%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main { 
+  flex: 1 0 auto;
+  padding-bottom: 24px;
+}
+
+main::after {
+  content: "";
+  display: block;
+  height: 0;
+}
+
+:where(.container > :last-child) { margin-bottom: 0; }
 
 
 img, video, canvas, svg, iframe {
@@ -720,10 +744,6 @@ img, video, canvas, svg, iframe {
   min-width: 0;
 }
 
-.flex > * {
-  min-width: 0;
-}
+.flex > * { min-width: 0; }
 
-@supports (overflow-x: clip) {
-  html, body { overflow-x: clip; }
-}
+
