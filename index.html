@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Accueil - Bubbleplace</title>
         <meta type="description" content="Voici mon portfolio" />
-        <link href="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=photo_camera" />
@@ -13,31 +12,29 @@
         <script src="https://cdn.weglot.com/weglot.min.js"></script>
         <script src="js/weglot-init.js"></script>
     </head>
+
     <body>
         <header>
             <div class="boxed">
                 <div class="flex aligncenter space-between">
-
                     <!-- GROUPE GAUCHE -->
                     <div class="left-group flex aligncenter">
                         <a href="img/website/Apopo_logo.png" class="header-logo">
                         <img src="img/website/Apopo_logo.png">
                         </a>
                         
-                        <ul class="header-menu-lang">
+                        <ul class="header-menu-lang" aria-label="Sélecteur de langue">
                             <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
                             <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
                         </ul>
                     </div>
-
                     <!-- MENU PRINCIPAL -->
                     <ul class="header-menu header-menu-main">
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#apropos">A propos</a></li>
-                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#realisations">Mes créations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-
                 </div>
             </div>
         </header>
@@ -45,8 +42,8 @@
         <div id="accueil" class="slider">
             <img src="img/website/slider.jpg" class="slider-background">
             <div class="slider-content">
-                <h1>Apo's bubble place</h1>
-                <p>Ma propre bulle rien qu'à moi :)</p>
+                <h1>Apo's Bubble place</h1>
+                <p>>Ma propre bulle rien qu'à moi :D</p>
             </div>
         </div>
 
@@ -54,11 +51,10 @@
             <div class="boxed">
                 <div class="flex toColumn mCenter">
                     <div class="w40 wm100">
-                        <h2>A propos</h2>
+                        <h2>A propos de moi</h2>
                     </div>
                     <div class="w60 wm100">
                         <p>Moi c'est Apo ! Mes passions dans la vie sont le dessin et les jeux-vidéox, ainsi que certains sports comme le ski et l'équitation. Mon rêve dans la vie serait de créer des dessins-animés et des bandes-dessinées. („• ᴗ •„) <br><br> Vous trouverez ici mes projets en cours et pleins de dessins ! Visitez ce site en cliquant sur les projects de la partie "Créations" pour plus de détails. ✩°｡⋆⸜(ू˙꒳​˙ ) <br><br> N'hésitez-pas à me soutenir sur les réseaux ou à m'envoyer un message anonyme dans "Contact". (❛◡˂̵ ̑̑✧) </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -66,34 +62,34 @@
         <div id="realisations" class="section">
             <div class="boxed text-center">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEnElEQVR4nO1ZWYhcRRStmHELcWGG7lfnvNfTOg4uA6JxRFyiiKL4YRQVjaAgwQ8FI4JgcEHQjyRE/TKaIIKCYiSCiEFCMgmJ+QiKCuKGQYMbSoL5Mcs4o9Eod6ae3BSvuuv19Dzz0Qces9StW/fcuvfWZkwPPfRwTIHkKgAT8rOqMY/LsuwSkg8DeJPkxyR/JXmQ5D8kDwD4heQOAGsA3JUkST1g/LWuz9QH4LpZszpJkjMBPAvgZz1o5PcXyTEA5+b6hoeHTwSwyyOwO8uyk7tqeJZlKcnXSB7uwHD/eyfXS/LJgMzyrhlvrb1PhYb+9gkpaQdwxeDgIGq12nzpMzAwcIqbretJrgTwKckjzsNPiUy9Xh8C8LvSN6ZmYSJJkjNmZLhML8l1vuEAtpC80RjTV0Zfo9Ggtfbi/G+Sbyi9Hxlj5gL4QP1vXcfGA5gHYJtn/Ndpml5jugBr7QjJv53eI1IQHKnL85mSnwAuKq18dHT0eJIbPePflrBoY1QTwFaSh2SWAAyGZAGsVzO6wWt7a0azIFXGCxmJ2TkR/bZ6pMeK5Eierb1PcoFuT9P0AjULh8Ux0cZLiKjOYvwLsV4uSPQDAQLLlf53AzL/JTTJJ2Lt75M4Vx03+YnayssuuWNm4BMlc1ORjLX2KrduiMwdUdaTvEeXsaKpa+VlkXeeE5nNoRyg0tHf339qq0QvlcSuVueGrQjIRHm5FUjuUY4KJnopuMTJlU42m83Ti+RivdyGwMZ2jioNAI8qAu+ZWUSaprfHbDkAfCOLWyyBDarjvZ3U9hKYUxCKIRKjsQS+zTvlq2KZ2l4W1trzYghEr/y6MsimrGxtn2HOfa7bJITVeIuiFAL4M+80MjJyQjerTmC8hYrAztA2g+TiKIUk9xbNQDeqThGstTcoIzd7BF5VbUtiCexQne40s4w0vhItjVII4DHV6UM5884mAZJLIgksi1JYr9cTkuNdX2ACAPBgJIGp01sU/POp25cvkJNZrVaz8ru19m4Az7nDzh4Af8gBX24myuxbADyuxlrptS1TNjxTxjFzvRJW6hMy1tpbI521IrRdlrhXOl8sQ8BICSX5sj4TlPwO6irWgsDzysiHQvkhFcl0ArllIPk6yR/Fs67MfilXIhKX1trbZDWVszPJC0l+FQqJgP5XirYujsBi1bbeVAEAt6hBd0fIP60IX6bbZPWtamPpn+YOFS2GLa5s7i/aKrhjbU5gm6kKALbnA8cmcxHSNL3UW5OqgcS+CotVEbd94+7a5KgbjyzLzld6vjBVAcDNauD328juUrIN3dZoNM5Sbd+ZquBW8/z+c3JoaOi0kCynr+KnjJR+uk3yRxHYa6qExKwa/JEWchMqzufpNrmp6Pb5o9NN2rhfIovOH8Y798rbgNZhKkYfgM+UdydJrpaLqmazeZIi8JOSuTL0YiNH3aoJiAHn6BhX3778dYbkSzpRhYRsY9I0vZrkD6pttfk/4B4vdhaQeEDa5fFD4rvN5vC3rl18dQp5oZELYhdWm/RDH6Zfb0Ik9ksomWMddvreaa3bNEq+fC9baH9t6KGHHsxR+BdmSNfYkJuttwAAAABJRU5ErkJggg==" alt="paint-palette-with-brush">
-                <h2>Mes réalisations</h2>
+                <h2>Mes créations</h2>
                 <div class="flex wrap gap20 space-between">
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_1.html">
                             <img src="img/website/Title_AW.png">
                             <h3>[Animation 2D]
-                                <br>Across the Wish</h3>
+                            <br>Across the Wish</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_2.html">
                             <img src="img/website/Neon_flowers.jpg">
                             <h3>[Animation 2D]
-                             <br> Neon Flowers</h3>
+                            <br> Neon Flowers</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_3.html">
                             <img src="img/website/Eternal Night.jpg">
-                            <h3>[Jeu-vidéo] 
-                                <br>Eternal Night</h3>
+                             <h3>[Jeux-vidéo]
+                            <br>Eternal Night</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_4.html">
                             <img src="img/website/manette.jpg">
                             <h3>[Jeux-vidéo]
-                            <br> Game Jam </h3>
+                            <br> Game Jam</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
@@ -120,7 +116,7 @@
                 <!--form-->
                 <div class="form">
                 <form id="msg-form" action="https://formspree.io/f/mlgpnvyo" method="POST">
-                <label for="message">Un avis, une question, une idée ? <br>Envoyez ici un message anonyme !  :</label>
+                <label for="message"><h3>Envoyez ici un message anonyme. ദ്ദി(˵ •̀ ᴗ - ˵ ) <br> Tu peux aussi me soutenir sur les réseaux ou me contacter via Discord.</h3><br><br></label>
                 <textarea id="message" name="message" required maxlength="500" placeholder="Écrire ici..."></textarea>
 
                 <!-- Champ honeypot anti-bot -->
@@ -181,55 +177,12 @@
                     </div>
                 </div>
                     <footer id="infos">
-                        <br><br><br>&copy; Copyright 2026 Apo - All rights reserved. <br> Fanart; music; original characters and universes belong to their respective owners.
+                        <br>&copy; Copyright 2026 Apo - All rights reserved. <br> Fanart; original characters and universes belong to their respective owners.
                     </footer>
                 </div>
             </div>
         </div>
-        <!-- 1) Conteneur où Google injecte le sélecteur -->
-        <div id="google_translate_element"></div>
-
-        <!-- 2) Initialisation du widget -->
-        <script>
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'fr',          // langue originale de la page
-                    includedLanguages: 'fr,en',  // langues proposées
-                    autoDisplay: false
-                }, 'google_translate_element');
-            }
-        </script>
-
-        <!-- 3) Charger le script Google (IMPORTANT : dans une balise <script>) -->
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-        <!-- 4) Logique pour changer la langue via cookie + écouteurs de clic -->
-        <script>
-            // change la langue via le cookie utilisé par le widget
-            function changeLanguage(lang) {
-                const domain = window.location.hostname;
-                // Écrit le cookie avec et sans attribut domain (utile selon l’hébergement)
-                if (lang === 'fr') {
-                    document.cookie = "googtrans=/fr/fr; path=/; domain=" + domain;
-                    document.cookie = "googtrans=/fr/fr; path=/;";
-                } else if (lang === 'en') {
-                    document.cookie = "googtrans=/fr/en; path=/; domain=" + domain;
-                    document.cookie = "googtrans=/fr/en; path=/;";
-                }
-                // Recharge pour que Google Translate relise le cookie
-                location.reload();
-            }
-
-            // Attacher les clics aux boutons (sinon rien ne se passe)
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelectorAll('.lang-btn').forEach(function (btn) {
-                    btn.addEventListener('click', function (e) {
-                        const lang = e.currentTarget.getAttribute('data-lang');
-                        changeLanguage(lang);
-                    });
-                });
-            });
-        </script>
     </body>
+
     <script src="js/app.js"></script>
 </html>
