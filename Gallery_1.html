@@ -23,10 +23,19 @@
                         </a>
                         
                         <ul class="header-menu-lang" aria-label="Sélecteur de langue">
-                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
-                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--fr" aria-hidden="true"></span>
+                                    <span class="lang-label">Français</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li><button class="lang-btn" data-lang="fr" id="btn-fr" type="button">Français</button></li>
+                                    <li><button class="lang-btn" data-lang="en" id="btn-en" type="button">Anglais</button></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
+                    <!-- Header menu boutons -->
                     <ul class="header-menu header-menu-main">
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#projet">Description</a></li>
@@ -41,6 +50,10 @@
                         <li><a href="#documentation">Documentation</a></li>
                         <li><a href="./index.html#realisations">Retour</a></li>
                     </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="./index.html#realisations">Retour</a>
                 </div>
             </div>
         </header>
@@ -113,7 +126,7 @@
                             <span>▶</span>
                         </button>
                     </div>
-                     <div style="max-width: 600px; position: relative;">
+                    <div style="max-width: 600px; position: relative;">
                         <video id="myVideo2" controls width="100%">
                             <source src="img/Gallery_1/Animation_vidéo/Introduction du projet.mp4" type="video/mp4">
                         </video>
@@ -147,6 +160,9 @@
                         </div>
                         <div class="w32 wm47 gallery1">
                             <a href="img/Gallery_1/Character/Numérique/Tsuki.png"><img src="img/Gallery_1/Character/Numérique/Tsuki.png"></a>
+                        </div>
+                        <div class="w32 wm47 gallery1">
+                            <a href="img/Gallery_1/Character/Numérique/TsukixAmateru.png"><img src="img/Gallery_1/Character/Numérique/TsukixAmateru.png"></a>
                         </div>
                         <div class="w32 wm47 gallery1">
                             <a href="img/Gallery_1/Character/Numérique/Nova_Artwork.png"><img src="img/Gallery_1/Character/Numérique/Nova_Artwork.png"></a>
