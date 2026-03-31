@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Neon flowers - Bubbleplace</title>
         <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css" type="text/css">
         <script src="https://cdn.weglot.com/weglot.min.js"></script>
         <script src="js/weglot-init.js"></script>
@@ -20,8 +21,16 @@
                         </a>
                         
                         <ul class="header-menu-lang" aria-label="Sélecteur de langue">
-                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
-                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--fr" aria-hidden="true"></span>
+                                    <span class="lang-label">Français</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li><button class="lang-btn" data-lang="fr" id="btn-fr" type="button">Français</button></li>
+                                    <li><button class="lang-btn" data-lang="en" id="btn-en" type="button">Anglais</button></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <ul class="header-menu header-menu-main">
@@ -31,6 +40,10 @@
                         <li><a href="#video">Vidéo</a></li>
                         <li><a href="./index.html#realisations">Retour</a></li>
                     </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="./index.html#realisations">Retour</a>
                 </div>
             </div>
         </header>
@@ -49,7 +62,7 @@
                         <h2>Description</h2> 
                     </div>
                     <div class="w60 wm100">
-                        <p>Neon flowers est un projet de vidéo Mapping commencé en fin 2024. Des fleurs néons et lumineuses dansent et changent leurs couleurs en fonction de la musique, créant des chorégraphies. L'idée est de créer une vidéo projetée sur les murs d'une pièce soit aux murs extérieurs d'un bâtiment (un peu comme sur le château de Disneyland lors d'un spectacle le soir). Ce projet ambitieux est en cours de réalisation. ✿</p>
+                        <p>Neon flowers est un projet de vidéo Mapping commencé en fin 2024. Des fleurs néons et lumineuses dansent et changent leurs couleurs en fonction de la musique, créant des chorégraphies. <br><br> L'idée est de créer une vidéo projetée sur les murs d'une pièce soit aux murs extérieurs d'un bâtiment (un peu comme sur le château de Disneyland lors d'un spectacle le soir). Ce projet ambitieux est en cours de réalisation. ✿</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +109,7 @@
                 </div>
             </div>
             <footer id="infos">
-                <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.  <br> Music belong to their respective owners.
+                <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
             </footer>
         </div>
         <!-- Lightbox / visualiseur plein écran -->
