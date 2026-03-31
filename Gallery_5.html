@@ -3,88 +3,130 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Ori and the Blind Forest - Bubbleplace</title>
+        <title>Minette - Bubbleplace</title>
         <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css" type="text/css">
         <script src="https://cdn.weglot.com/weglot.min.js"></script>
         <script src="js/weglot-init.js"></script>
     </head>
-    <body>
+    <div>
         <header>
             <div class="boxed">
                 <div class="flex aligncenter space-between">
-                    <!-- GROUPE GAUCHE -->
+                     <!-- GROUPE GAUCHE -->
                     <div class="left-group flex aligncenter">
                         <a href="img/website/Apopo_logo.png" class="header-logo">
                         <img src="img/website/Apopo_logo.png">
                         </a>
                         
                         <ul class="header-menu-lang" aria-label="Sélecteur de langue">
-                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
-                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--fr" aria-hidden="true"></span>
+                                    <span class="lang-label">Français</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li><button class="lang-btn" data-lang="fr" id="btn-fr" type="button">Français</button></li>
+                                    <li><button class="lang-btn" data-lang="en" id="btn-en" type="button">Anglais</button></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <ul class="header-menu header-menu-main">
                         <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#projet">Description</a></li>
-                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#description">Description</a></li>
+                        <li><a href="#Minette">Minette</a></li> 
                         <li><a href="./index.html#realisations">Retour</a></li>
                     </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="./index.html#realisations">Retour</a>
                 </div>
             </div>
         </header>
 
-
         <div id="accueil" class="slider">
-            <img src="img/Gallery_5/Ori_Nibel.jpg" class="slider-background">
-                <div class="slider-content">
-                    <h1>[Fan art]]</h1>
-                    <p>Ori and the Blind Forest</p>
-                </div>
+            <img src="img/Gallery_6/M_big_profil2.jpg" class="slider-background">
+            <div class="slider-content">
+                <h1>[Bonus]</h1>
+                <p>Minette</p>
+            </div>
         </div>
 
-        <div id="projet" class="section">
+        <div id="description" class="section">
             <div class="boxed">
                 <div class="flex toColumn mCenter">
                     <div class="w40 wm100">
                         <h2>Description</h2> 
                     </div>
                     <div class="w60 wm100">
-                        <p>Voici mes fanarts sur le jeu-vidéo Ori and the Blind Forest.</p>
+                        <p>J'aime les chats et j'ai une page à combler, alors voici une section rien que pour ma princesse sur pattes. <br> <br>Voici Minette, elle aime dormir et réclamer des câlins, elle me suit partout et parfois, elle est têtue quand elle réclame quelque chose. C'est une chatte heureuse, adorable. <br><br>Cette page est éphémère jusqu'en milieu Avril 2026.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="galerie" class="section dark">
-            <div class="boxed text-center"> 
-                <h2>Galerie</h2>
+        <div id="Minette" class="section dark">
+            <div class="boxed text-center">
+                <h2>Minette</h2>
                 <div class="flex wrap gap20 space-between">
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Ori_Nibel.jpg"><img src="img/Gallery_5/Ori_Nibel.jpg"></a>
+                        <a href="img/Gallery_6/M_sit2.jpg"><img src="img/Gallery_6/M_sit2.jpg"></a>
                     </div>
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Ori_water.jpg"><img src="img/Gallery_5/Ori_water.jpg"></a>
+                        <a href="img/Gallery_6/M_sit3.jpg"><img src="img/Gallery_6/M_sit3.jpg"></a>
                     </div>
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Ori_sketch.jpg"><img src="img/Gallery_5/Ori_sketch.jpg"></a>
+                        <a href="img/Gallery_6/M_look.jpg"><img src="img/Gallery_6/M_look.jpg"></a>
                     </div>
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Ori_fly.jpg"><img src="img/Gallery_5/Ori_fly.jpg"></a>
+                        <a href="img/Gallery_6/M_down.jpg"><img src="img/Gallery_6/M_down.jpg"></a>
                     </div>
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Ori_Niwen.jpg"><img src="img/Gallery_5/Ori_Niwen.jpg"></a>
+                        <a href="img/Gallery_6/M_eyes.jpg"><img src="img/Gallery_6/M_eyes.jpg"></a>
                     </div>
                     <div class="w32 wm47 gallery1">
-                        <a href="img/Gallery_5/Bird.jpg"><img src="img/Gallery_5/Bird.jpg"></a>
+                        <a href="img/Gallery_6/M_chair.jpg"><img src="img/Gallery_6/M_chair.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay1.jpg"><img src="img/Gallery_6/M_lay1.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay2.jpg"><img src="img/Gallery_6/M_lay2.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay3.jpg"><img src="img/Gallery_6/M_lay3.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay4.jpg"><img src="img/Gallery_6/M_lay4.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay5.jpg"><img src="img/Gallery_6/M_lay5.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay6.jpg"><img src="img/Gallery_6/M_lay6.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay7.jpg"><img src="img/Gallery_6/M_lay7.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay8.jpg"><img src="img/Gallery_6/M_lay8.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="img/Gallery_6/M_lay9.jpg"><img src="img/Gallery_6/M_lay9.jpg"></a>
                     </div>
                 </div>
             </div>
         </div>
-        <footer id="infos">
-            <br><br>&copy; © 2026 Apo – All rights reserved. Fanart; original characters and universes belong to their respective owners.
-        </footer>
-        
+
+        <div>
+            <footer id="infos">
+                <br><br><br>&copy; Copyright 2026 Apo – All rights reserved.
+            </footer>
+        </div>
+    
         <!-- Lightbox / visualiseur plein écran -->
         <div id="lightbox" class="hidden" aria-hidden="true">
             <button class="lb-close" aria-label="Fermer">&times;</button>
@@ -94,7 +136,7 @@
                 <div class="lb-caption"></div>
             </div>
             <button class="lb-next" aria-label="Suivant">&#10095;</button>
-        </div>
+        </div>   
     </body>
 
     <script src="js/app.js"></script>
