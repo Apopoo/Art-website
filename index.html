@@ -24,8 +24,16 @@
                         </a>
                         
                         <ul class="header-menu-lang" aria-label="Sélecteur de langue">
-                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
-                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--fr" aria-hidden="true"></span>
+                                    <span class="lang-label">Français</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li><button class="lang-btn" data-lang="fr" id="btn-fr" type="button">Français</button></li>
+                                    <li><button class="lang-btn" data-lang="en" id="btn-en" type="button">Anglais</button></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- MENU PRINCIPAL -->
@@ -35,10 +43,14 @@
                         <li><a href="#realisations">Mes créations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="#contact">Contact</a>
                 </div>
             </div>
         </header>
-
+   
         <div id="accueil" class="slider">
             <img src="img/website/slider.jpg" class="slider-background">
             <div class="slider-content">
@@ -54,7 +66,7 @@
                         <h2>A propos de moi</h2>
                     </div>
                     <div class="w60 wm100">
-                        <p>Moi c'est Apo ! Mes passions dans la vie sont le dessin et les jeux-vidéox, ainsi que certains sports comme le ski et l'équitation. Mon rêve dans la vie serait de créer des dessins-animés et des bandes-dessinées. („• ᴗ •„) <br><br> Vous trouverez ici mes projets en cours et pleins de dessins ! Visitez ce site en cliquant sur les projects de la partie "Créations" pour plus de détails. ✩°｡⋆⸜(ू˙꒳​˙ ) <br><br> N'hésitez-pas à me soutenir sur les réseaux ou à m'envoyer un message anonyme dans "Contact". (❛◡˂̵ ̑̑✧) </p>
+                        <p>Moi c'est Apo ! Mes passions dans la vie sont le dessin et les jeux-vidéos, ainsi que certains sports comme le ski et l'équitation. Mon rêve dans la vie serait de créer des dessins-animés et des bandes-dessinées. („• ᴗ •„) <br><br> Vous trouverez ici mes projets en cours et pleins de dessins ! Visitez ce site en cliquant sur les projects de la partie "Créations" pour plus de détails. ✩°｡⋆⸜(ू˙꒳​˙ ) <br><br> N'hésitez-pas à me soutenir sur les réseaux ou à m'envoyer un message anonyme dans "Contact". (❛◡˂̵ ̑̑✧) </p>
                     </div>
                 </div>
             </div>
@@ -82,29 +94,29 @@
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_3.html">
                             <img src="img/website/Eternal Night.jpg">
-                             <h3>[Jeux-vidéo]
+                             <h3>[Jeu-vidéo]
                             <br>Eternal Night</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_4.html">
                             <img src="img/website/manette.jpg">
-                            <h3>[Jeux-viéo]
+                            <h3>[Jeu-vidéo]
                             <br> Game Jam</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_5.html">
-                            <img src="img/website/Ori Nibel.jpg">
+                            <img src="img/website/Kirby friends.png">
                             <h3>[Fanart]
-                            <br> Ori - Blind Forest </h3>
+                            <br>GameLand</h3>
                         </a>
                     </div>
                     <div class="w32 wm47 realisation">
                         <a href="./Gallery_6.html">
-                            <img src="img/website/Kirby friends.png">
-                            <h3>[Fanart]
-                            <br>JV Univers</h3>
+                            <img src="img/website/M_profile.jpg">
+                            <h3>[Bonus]
+                            <br>Minette</h3>
                         </a>
                     </div>
                 </div>
@@ -157,7 +169,7 @@
                 <!--réseauw & contact-->
                 <div class="flex toColumn space-between mgap20">
                     <div class="w32 wm100 contact">
-                        <a href="https://x.com/Cest_pas_Apo?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnSWRzDLM1c9-ouZsELzF-1yE7RJLVdpbbkBx05u01oTFNIbg05yN08tu18VM_aem_-qstMHA-2MQh_gZefebfNQ">
+                        <a href="https://x.com/Cest_pas_Apo?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnSWRzDLM1c9-ouZsELzF-1yE7RJLVdpbbkBx05u01oTFNIbg05yN08tu18VM_aem_-qstMHA-2MQh_gZefebfNQ" style="color: lightblue";>
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADRUlEQVR4nO2ZXWiOYRjHn3343JjZ5gD5ykoRRVhq9iEHcmCbjxxQOHNEQ0uRsTii1Up2wMGc4ECGUg4UilI25LtIPiMfs9d85Ounm/9jN827+13teW/t/R+97/+5ruu+/j33fd3X/dxBkEIKKfQYwAigDrgCdBA9OoBWYAdQ0FMRS4AY/qAdqOqJiO8KcAwoAbKCiAFkAaVAs3L5BlQmMp3CN7Ep8ARAjXJ6C+S7ONSFbyLwDMAJ5bbdxfiqjEsCzwCUKbdWF+N3Ms4OPAMwRLnFXIx/IvAUuObXp4QA9d3U/FUJJDYcuCu/hqiFDACuxRFi1lmhw1j9gDPyOQVkRipEdpOBj9o4F1j8YYW4AGTE8U8DmmR7A8hJ2hoBNsr8KZAnbhjwUPyWOL5bZfMMGOMyXm8KSbemxu8NFJirduILMLsLv6V6kx+AWS5j9aoQ2Y8CXstttcXvEXfP3pOAmcB7Ca1wHafXhchnsdV2F1oFIewS9okbB7wQV53IGJEIkd9BuV4Mqw8wRQXBYCVwS78bE40fpZAc4IHct1n8ev7EaZcymzQh8i0GvmqRF1ll1iQfHo6cymxShch/l0LcN02euJHAK/Frexo7aiGZwCWF2W/xFeJMxZrkvRADk6gSNlhm8QfEtQD9g/9AyFirzL40U0t8tvYVg52+T62hwHWFeWNVqjQ9L1IxMEWh2NeqlQGcVIhzwGjguf6vs+xqxT0Ccn0Uslfut8METWesvuoTMNUqCGbjNGjySghQLVdTZif+9azRatcHiptgfXZa7oUQYKHmvGlH5nTxfDBwR6F3W/wacW2urTy9JQSYrmbRTJ8VcexmAJ/V9c6z+CPWmkpPihDt2I+7O0R1cZh6Yh3EcrXoDTZELkR7gvlKb3AoLK8OB7Gz8jlq8fOtgjAtMiEqs8dlet6cPboN3Ok7Xs3jv3ATGBSVkAarMUz43sJ8LiI+6iMRkkzQF4XEPP6IPVS5tbsYh5WoNPAMQLlya3ExNhePBs2BZ6CzIa11MS6wymNN4AmAzVY7k+fqVKVWAl13lSVjzfBr0y233oTJaVGiQSp18egL2hIWYYnJNxePOmOHV3JRIgZc1kHMbTqlkEIKQVf4AS4Y/ovQkay6AAAAAElFTkSuQmCC" alt="twitterx--v1">
                         <span class="label">Compte X</span>
                         <span class="value">@Cest_pas_Apo</span>
@@ -165,7 +177,7 @@
                     </div>
                     <div class="w32 wm100 contact">
                         <a href="
-                        https://www.instagram.com/apo_qui.dessine?igsh=MWx3dHhka3FlZW42Zg==">
+                        https://www.instagram.com/apo_qui.dessine?igsh=MWx3dHhka3FlZW42Zg==" style="color: lightblue";>
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVR4nO2ZS2sUQRCAZ13Xi7veXMn+CB9X8UFiBINgFJI/k5iDD6KyGrLJybN5rYKIv8GLSfCoMd6iK8ZbjMfFTxprtGxdp3seOwnOBwMLU1VdNVtV3VMTBAUFBf8PwAHgPDADrAMfgS7x6YoNY+sBcA4oZeX8ReAV2bMOXEjT8TJwl/7zEDiYhvPPLcM7wCwwCAwYmYT2B4AhoAV8sdZ6lsR+II5qFoCjsQ1Gr1cHlqw1Z5LkvOZG6h73ALhlrT0Up9vogl0I+ghQApatwnbvTtLOdM5nmTaXgQ/Ae2DESiddE2d8jJo+HzKblfMGcTxkK1AAc+re/cAVYC1O/gEVYFwKcQP4Kpf5vSj3Kh4BDKt7qz4BmN0xZMBR5xrwjmiMzFWlNyJBbAGXLJsNpdfxCUAfD8oOBX8Pf+4YXYd9IqTrE8BPHGRt5z8BE8AJ4LBcJ4FJufdbEEGKvngrSdpoVoDqP+RrQNvSGc0lAOCQlfMrLr1aevxjpbdpF3a/Ahi30qbnk+/xT2wr/bE8AtBnlgln47/0r7vs9FkG8FaJHY8RgCnskI08AthVYs7po/SrSn93PwZwROnv5BHAvk+hRSU2GSOAKaX/aC+00Zpn+nzOu41WrI2s7bGRPcl9IzOYU6WWlR22FvHktfPfgCu95DMPQGTNqVKzLZvUKWmVVfk9ZaWNYTpNX5Icp+0gojBPfjrL43ScF5pRyecoNqPSJo0XmiSvlGMyP3ojm525XptWKfcqHvaGlR8vfQIwg9aQVpATwLzyoxl3rGJGG/VMPf0LwDHruOI1VinJMClkKegj/FjfvCCFrHqP3c2I2yq+m5l5/Kfzt621B4M4WAMuZNxXzzht2taazSQGyzLixqqJOekQjRTG6w2xNW/lvOFpovF6zh84WomdtwI5Dbzog+NrsXPescDOmkGrdIZOCh/5OmKraVplZh/5CgoKgj3JdyvsHS0Y1nz2AAAAAElFTkSuQmCC" alt="instagram-new--v1">
                         <span class="label">Instagram</span>
                         <span class="value">@apo_qui.dessine</span>
@@ -176,9 +188,9 @@
                         <span class="label">Discord</span>
                         <span class="value">@apo1003</span> </div>
                     </div>
-                </div>
+                    </div>
                     <footer id="infos">
-                        <br>&copy; Copyright 2026 Apo - All rights reserved. <br> Fanart; original characters and universes belong to their respective owners.
+                        <br><br>&copy; Copyright 2026 Apo - All rights reserved. <br> Fanart; original characters and universes belong to their respective owners.
                     </footer>
                 </div>
             </div>
