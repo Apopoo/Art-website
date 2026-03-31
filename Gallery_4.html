@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Game Jam 2025 - Bubbleplace</title>
         <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css" type="text/css">
         <script src="https://cdn.weglot.com/weglot.min.js"></script>
         <script src="js/weglot-init.js"></script>
@@ -20,16 +21,28 @@
                         </a>
                         
                         <ul class="header-menu-lang" aria-label="Sélecteur de langue">
-                            <li><button class="lang-btn" data-lang="fr" id="btn-fr">Français</button></li>
-                            <li><button class="lang-btn" data-lang="en" id="btn-en">Anglais</button></li>
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--fr" aria-hidden="true"></span>
+                                    <span class="lang-label">Français</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li><button class="lang-btn" data-lang="fr" id="btn-fr" type="button">Français</button></li>
+                                    <li><button class="lang-btn" data-lang="en" id="btn-en" type="button">Anglais</button></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <ul class="header-menu header-menu-main">
                         <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#projet">Description</a></li>
+                        <li><a href="#projet">Projet</a></li>
                         <li><a href="#galerie">Galerie</a></li>
                         <li><a href="./index.html#realisations">Retour</a></li>
                     </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="./index.html#realisations">Retour</a>
                 </div>
             </div>
         </header>
@@ -45,7 +58,7 @@
             <div class="boxed">
                 <div class="flex toColumn mCenter">
                     <div class="w40 wm100">
-                        <h2>Description</h2> 
+                        <h2>Projet</h2> 
                     </div>
                     <div class="w60 wm100">
                         <p>Premier Projet de jeu-vidéo 2D codé en Python et en équipe durant la Game Jam 2025 dans le cadre du festival de la technologie, vous pouvez retrouver ici les sprites ue j'ai réalisé durant le projet.</p>
