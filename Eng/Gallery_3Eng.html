@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Eternal Night - Bubbleplace</title>
+        <meta type="description" content="Voici mon portfolio" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+        <link rel="stylesheet" href="../https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=palette" />
+        <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <!-- GROUPE GAUCHE -->
+                    <div class="left-group flex aligncenter">
+                        <a href="../img/website/Apopo_logo.png" class="header-logo">
+                        <img src="../img/website/Apopo_logo.png">
+                        </a>
+                        
+                        <ul class="header-menu-lang" aria-label="Sélecteur de langue">
+                            <li class="lang-selector">
+                                <button id="lang-toggle" class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="lang-flag lang-flag--en" aria-hidden="true"></span>
+                                    <span class="lang-label">English</span>
+                                </button>
+                                <ul class="lang-dropdown" role="listbox">
+                                    <li>
+                                        <a class="lang-btn" href="../Gallery_3.html">Français</a>
+                                    </li>
+                                    <li>
+                                        <a class="lang-btn" href="Eng/Gallery_3Eng.html">English</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="header-menu header-menu-main">
+                        <li><a href="#accueil">Home</a></li>
+                        <li><a href="#projet">Description</a></li>
+                        <li><a href="#galerie">Gallery</a></li>
+                        <li><a href="./indexEng.html#realisations">Back</a></li>
+                    </ul>
+                    <button class="header-menu-mobile" type="button" onclick="openMenu()" aria-label="Ouvrir le menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a class="header-menu-fixed" href="./indexEng.html#realisations">Back</a>
+                </div>
+            </div>
+        </header>
+        <div id="accueil" class="slider">
+                <img src="../img/Gallery_3/Eternal_Night.jpg" class="slider-background">
+                <div class="slider-content">
+                    <h1>Eternal Night</h1>
+                    <p>Video-game - 2D Platformer</p>
+                </div>
+            </div>
+
+        <div id="projet" class="section">
+            <div class="boxed">
+                <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>Description</h2> 
+                    </div>
+                    <div class="w60 wm100">
+                        <p>My first video-game platformer 2D project. The player controls Nyx, a bat that sets off on a quest to find the sun that has disappeared from the forest. This game, initially created as a short animated film, aims to invent new movement palettes. <br><br> For example, Nyx can glide over a cliff, climb vertical walls of the level and grab onto horizontal branches suspended in the void. (㇏(•̀ ᢍ •́ )ノ)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galerie" class="section dark">
+            <div class="boxed text-center"> 
+                <h2>Galerie</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm47 gallery1">
+                        <a href="../img/Gallery_3/Eternal_Night.jpg"><img src="../img/Gallery_3/Eternal_Night.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="../img/Gallery_3/Nyx_croquis.jpg"><img src="../img/Gallery_3/Nyx_croquis.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="../img/Gallery_3/Level concept.jpg"><img src="../img/Gallery_3/Level concept.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="../img/Gallery_3/First_Nyx.jpg"><img src="../img/Gallery_3/First_Nyx.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                    <a href="../img/Gallery_3/Nyx_fly.jpg"><img src="../img/Gallery_3/Nyx_fly.jpg"></a>
+                    </div>
+                    <div class="w32 wm47 gallery1">
+                        <a href="../img/Gallery_3/Nyx_sleep.jpg"><img src="../img/Gallery_3/Nyx_sleep.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="infos">
+            <br><br><br>&copy; Copyright 2026 Apo - All rights reserved.
+        </footer>
+        
+        <!-- Lightbox / visualiseur plein écran -->
+        <div id="lightbox" class="hidden" aria-hidden="true">
+            <button class="lb-close" aria-label="Fermer">&times;</button>
+            <button class="lb-prev" aria-label="Précédent">&#10094;</button>
+            <div class="lb-content">
+                <img class="lb-image" src="" alt="">
+                <div class="lb-caption"></div>
+            </div>
+            <button class="lb-next" aria-label="Suivant">&#10095;</button>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
