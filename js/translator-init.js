@@ -3,15 +3,15 @@
     s.src = "https://cdn.conveythis.com/javascript/conveythis.js";
     s.onload = function() {
 
-        // ✅ Initialisation avec ta clé API
+        //  Initialisation
         ConveyThis_Init({
             api_key: "pub_fb32793d8c366d7061fceaed2235e734"
         });
         
-        // ✅ Quand ConveyThis a fini de charger
+        // Quand ConveyThis a fini de charger
         document.addEventListener("conveythisLoaded", function() {
 
-            // ✅ Connecter TES boutons FR/EN
+            // Connecter boutons FR/EN
             document.querySelectorAll(".lang-btn").forEach(btn => {
                 btn.addEventListener("click", function() {
 
@@ -26,7 +26,7 @@
                 });
             });
 
-            // ✅ Cacher le widget APRES initialisation
+            // Cacher le widget
             const w = document.getElementById("conveythis-wrapper");
             if (w) w.style.display = "none";
         });
@@ -34,3 +34,4 @@
 
     document.head.appendChild(s);
 })();
+``
