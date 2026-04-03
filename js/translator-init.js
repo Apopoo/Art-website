@@ -1,14 +1,16 @@
 (function() {
+
+    // Charger la librairie ConveyThis
     var s = document.createElement("script");
     s.src = "https://cdn.conveythis.com/javascript/conveythis.js";
     s.onload = function() {
 
-        //  Initialisation
+        // Initialisation
         ConveyThis_Init({
             api_key: "pub_fb32793d8c366d7061fceaed2235e734"
         });
-        
-        // Quand ConveyThis a fini de charger
+
+        // Quand ConveyThis est prêt
         document.addEventListener("conveythisLoaded", function() {
 
             // Connecter boutons FR/EN
@@ -27,7 +29,7 @@
                 });
             });
 
-            
+            //  Cacher le widget ConveyThis
             function hideConveyThisWidget() {
                 var widget = document.getElementById("conveythis-wrapper");
                 if (widget) {
@@ -36,9 +38,24 @@
                     setTimeout(hideConveyThisWidget, 200);
                 }
             }
-            hideConveyThisWidget()
-
+            hideConveyThisWidget();
         });
     };
+
+    // Ajouter le script ConveyThis dans le head
     document.head.appendChild(s);
+
+
+    // Gestion de l'ouverture/fermeture du menu FR/EN
+    document.addEventListener("DOMContentLoaded", function() {
+        var toggle = document.getElementById("lang-toggle");
+        var dropdown = document.querySelector(".lang-dropdown");
+
+        if (toggle && dropdown) {
+            toggle.addEventListener("click", function() {
+                dropdown.classList.toggle("open");
+            });
+        }
+    });
+
 })();
