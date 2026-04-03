@@ -34,4 +34,3 @@
 
     document.head.appendChild(s);
 })();
-``
