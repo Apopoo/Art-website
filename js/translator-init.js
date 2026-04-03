@@ -12,10 +12,11 @@
         document.addEventListener("conveythisLoaded", function() {
 
             // Connecter boutons FR/EN
-            document.querySelectorAll(".lang-btn").forEach(btn => {
+            var buttons = document.querySelectorAll(".lang-btn");
+            buttons.forEach(function(btn) {
                 btn.addEventListener("click", function() {
 
-                    const lang = this.getAttribute("data-lang");
+                    var lang = this.getAttribute("data-lang");
 
                     if (window.ConveyThis_Translation) {
                         ConveyThis_Translation.switchToLang(lang);
@@ -27,7 +28,7 @@
             });
 
             // Cacher le widget
-            const w = document.getElementById("conveythis-wrapper");
+            var w = document.getElementById("conveythis-wrapper");
             if (w) w.style.display = "none";
         });
     };
