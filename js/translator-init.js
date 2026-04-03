@@ -42,20 +42,21 @@
         });
     };
 
-    // ✅ Ajouter le script ConveyThis dans le head
     document.head.appendChild(s);
 
-
-    // ✅ Gestion de l'ouverture/fermeture du menu FR/EN
+    // ✅ Gestion du menu SANS utiliser &&
     document.addEventListener("DOMContentLoaded", function() {
+
         var toggle = document.getElementById("lang-toggle");
         var dropdown = document.querySelector(".lang-dropdown");
 
-        // ✅ Correction du bug &amp;&amp;
-        if (toggle && dropdown) {
-            toggle.addEventListener("click", function() {
-                dropdown.classList.toggle("open");
-            });
+        // ✅ Version ANTI-ENCODAGE
+        if (toggle !== null) {
+            if (dropdown !== null) {
+                toggle.addEventListener("click", function() {
+                    dropdown.classList.toggle("open");
+                });
+            }
         }
     });
 
