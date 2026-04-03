@@ -50,4 +50,3 @@
     document.head.appendChild(s);
 
 })();
-``
