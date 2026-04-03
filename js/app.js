@@ -1,71 +1,72 @@
+/* ======= MENU MOBILE ======= */
 const openMenu = () => {
     const menu = document.querySelector(".header-menu");
     menu.classList.toggle("active");
     const icon = document.querySelector("header .material-icons");
-    if(menu.classList.contains("active")){
+    if (menu.classList.contains("active")) {
         icon.innerHTML = "close";
-    }
-    else{
+    } else {
         icon.innerHTML = "menu";
     }
-}
+};
 
 // Fermer le menu quand on clique sur un lien
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     const menuLinks = document.querySelectorAll(".header-menu a");
     const menu = document.querySelector(".header-menu");
-    const menuButton = document.querySelector(".header-menu-mobile");
-    
+
     menuLinks.forEach(link => {
-        link.addEventListener("click", function(){
+        link.addEventListener("click", function () {
             menu.classList.remove("active");
             document.querySelector("header .material-icons").innerHTML = "menu";
         });
     });
 });
 
-/* Lightbox / visualiseur d'images */
-(function(){
+/* ======= LIGHTBOX ======= */
+(function () {
     const galleryLinks = Array.from(document.querySelectorAll('.gallery1 a'));
-    if(!galleryLinks.length) return;
+    if (!galleryLinks.length) return;
 
     const images = galleryLinks.map(a => a.getAttribute('href') || (a.querySelector('img') && a.querySelector('img').src));
     const lightbox = document.getElementById('lightbox');
-    if(!lightbox) return;
+    if (!lightbox) return;
+
     const lbImage = lightbox.querySelector('.lb-image');
     const lbCaption = lightbox.querySelector('.lb-caption');
     const btnClose = lightbox.querySelector('.lb-close');
     const btnNext = lightbox.querySelector('.lb-next');
     const btnPrev = lightbox.querySelector('.lb-prev');
+
     let current = 0;
 
-    function open(idx){
+    function open(idx) {
         current = idx;
         lbImage.src = images[current] || '';
         const alt = galleryLinks[current].querySelector('img') ? galleryLinks[current].querySelector('img').alt : '';
         lbCaption.textContent = alt || '';
         lightbox.classList.remove('hidden');
-        lightbox.setAttribute('aria-hidden','false');
+        lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
     }
 
-    function close(){
+    function close() {
         lightbox.classList.add('hidden');
-        lightbox.setAttribute('aria-hidden','true');
+        lightbox.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
         lbImage.src = '';
     }
 
-    function showNext(){
+    function showNext() {
         open((current + 1) % images.length);
     }
 
-    function showPrev(){
+    function showPrev() {
         open((current - 1 + images.length) % images.length);
     }
 
     galleryLinks.forEach((a, i) => {
-        a.addEventListener('click', function(e){
+        a.addEventListener('click', function (e) {
             e.preventDefault();
             open(i);
         });
@@ -75,68 +76,82 @@ document.addEventListener("DOMContentLoaded", function(){
     btnNext.addEventListener('click', showNext);
     btnPrev.addEventListener('click', showPrev);
 
-    // click on overlay to close
-    lightbox.addEventListener('click', function(e){
-        if(e.target === lightbox) close();
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) close();
     });
 
-    // keyboard navigation
-    document.addEventListener('keydown', function(e){
-        if(lightbox.classList.contains('hidden')) return;
-        if(e.key === 'ArrowRight') showNext();
-        if(e.key === 'ArrowLeft') showPrev();
-        if(e.key === 'Escape') close();
+    document.addEventListener('keydown', function (e) {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'Escape') close();
     });
-    
-        // swipe tactile (mobile)
-        let touchStartX = 0;
-        let touchStartY = 0;
-        const swipeThreshold = 40; // px
-        const maxVerticalTolerance = 75; // px
-    
-        lightbox.addEventListener('touchstart', function(e){
-            const t = e.changedTouches[0];
-            touchStartX = t.clientX;
-            touchStartY = t.clientY;
-        }, {passive: true});
-    
-        lightbox.addEventListener('touchend', function(e){
-            const t = e.changedTouches[0];
-            const distX = t.clientX - touchStartX;
-            const distY = t.clientY - touchStartY;
-            if(Math.abs(distX) >= swipeThreshold && Math.abs(distY) <= maxVerticalTolerance){
-                if(distX < 0) showNext();
-                else showPrev();
-            }
-        }, {passive: true});
-    
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const swipeThreshold = 40;
+    const maxVerticalTolerance = 75;
+
+    lightbox.addEventListener('touchstart', function (e) {
+        const t = e.changedTouches[0];
+        touchStartX = t.clientX;
+        touchStartY = t.clientY;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', function (e) {
+        const t = e.changedTouches[0];
+        const distX = t.clientX - touchStartX;
+        const distY = t.clientY - touchStartY;
+        if (Math.abs(distX) >= swipeThreshold && Math.abs(distY) <= maxVerticalTolerance) {
+            if (distX < 0) showNext();
+            else showPrev();
+        }
+    }, { passive: true });
+
 })();
 
-/* Gestion du bouton play vidéo */
-document.addEventListener('DOMContentLoaded', function(){
-    // Fonction pour gérer une vidéo et son bouton play
+/* ======= VIDEO PLAY BUTTONS ======= */
+document.addEventListener('DOMContentLoaded', function () {
+
     function setupVideoPlayButton(videoId, btnId) {
         const video = document.getElementById(videoId);
         const playBtn = document.getElementById(btnId);
-        
-        if(!video || !playBtn) return;
-        
-        // Masquer le bouton quand la vidéo joue
-        video.addEventListener('play', function(){
+
+        if (!video || !playBtn) return;
+
+        video.addEventListener('play', function () {
             playBtn.classList.add('hidden');
         });
-        
-        // Afficher le bouton quand la vidéo est en pause ou arrêtée
-        video.addEventListener('pause', function(){
+
+        video.addEventListener('pause', function () {
             playBtn.classList.remove('hidden');
         });
-        
-        // Afficher le bouton initialement
+
         playBtn.classList.remove('hidden');
     }
-    
-    // Gérer toutes les vidéos
+
     setupVideoPlayButton('myVideo', 'playBtn');
     setupVideoPlayButton('myVideo1', 'playBtn1');
     setupVideoPlayButton('myVideo2', 'playBtn2');
+});
+
+
+/* ======================================================
+   ✅ ✅ SYSTÈME LANGUE — VERSION FINALE
+   (uniquement dropdown + liens FR ↔ EN)
+   ====================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("lang-toggle");
+    const dropdown = document.querySelector(".lang-dropdown");
+
+    if (!toggle || !dropdown) return;
+
+    toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        dropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function () {
+        dropdown.classList.remove("open");
+    });
 });
