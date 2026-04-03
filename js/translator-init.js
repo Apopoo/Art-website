@@ -27,11 +27,18 @@
                 });
             });
 
-            // Cacher le widget
-            var w = document.getElementById("conveythis-wrapper");
-            if (w) w.style.display = "none";
+            
+            function hideConveyThisWidget() {
+                var widget = document.getElementById("conveythis-wrapper");
+                if (widget) {
+                    widget.style.display = "none";
+                } else {
+                    setTimeout(hideConveyThisWidget, 200);
+                }
+            }
+            hideConveyThisWidget()
+
         });
     };
-
     document.head.appendChild(s);
 })();
