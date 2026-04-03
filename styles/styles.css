@@ -922,3 +922,13 @@ img, video, canvas, svg, iframe {
 }
 
 .flex > * { min-width: 0; }
+
+
+.lang-dropdown {
+    display: none;
+}
+
+.lang-dropdown.open {
+    display: block;
+}
+
