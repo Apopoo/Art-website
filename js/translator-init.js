@@ -5,15 +5,15 @@
     s.src = "https://cdn.conveythis.com/javascript/conveythis.js";
     s.onload = function() {
 
-        // Initialisation
+        // ✅ Initialisation
         ConveyThis_Init({
             api_key: "pub_fb32793d8c366d7061fceaed2235e734"
         });
 
-        // Quand ConveyThis est prêt
+        // ✅ Quand ConveyThis est prêt
         document.addEventListener("conveythisLoaded", function() {
 
-            // Connecter boutons FR/EN
+            // ✅ Connecter TES boutons FR/EN
             var buttons = document.querySelectorAll(".lang-btn");
             buttons.forEach(function(btn) {
                 btn.addEventListener("click", function() {
@@ -29,7 +29,7 @@
                 });
             });
 
-            //  Cacher le widget ConveyThis
+            // ✅ Cacher le widget ConveyThis
             function hideConveyThisWidget() {
                 var widget = document.getElementById("conveythis-wrapper");
                 if (widget) {
@@ -42,15 +42,16 @@
         });
     };
 
-    // Ajouter le script ConveyThis dans le head
+    // ✅ Ajouter le script ConveyThis dans le head
     document.head.appendChild(s);
 
 
-    // Gestion de l'ouverture/fermeture du menu FR/EN
+    // ✅ Gestion de l'ouverture/fermeture du menu FR/EN
     document.addEventListener("DOMContentLoaded", function() {
         var toggle = document.getElementById("lang-toggle");
         var dropdown = document.querySelector(".lang-dropdown");
 
+        // ✅ Correction du bug &amp;&amp;
         if (toggle && dropdown) {
             toggle.addEventListener("click", function() {
                 dropdown.classList.toggle("open");
