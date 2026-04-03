@@ -922,3 +922,7 @@ img, video, canvas, svg, iframe {
 }
 
 .flex > * { min-width: 0; }
+
+#conveythis-wrapper {
+    display: none !important;
+}
