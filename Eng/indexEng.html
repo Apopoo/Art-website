@@ -148,7 +148,7 @@
                     e.preventDefault(); // Empêche la redirection Formspree
 
                     btn.disabled = true;
-                    btn.textContent = "Envoi...";
+                    btn.textContent = "Sending...";
 
                     const data = new FormData(form);
 
@@ -159,11 +159,11 @@
                     });
 
                     if (response.ok) {
-                    btn.textContent = "Merci !";
+                    btn.textContent = "Thank you!";
                     form.reset();
                     } else {
                     btn.disabled = false;
-                    btn.textContent = "Erreur";
+                    btn.textContent = "Error";
                     }
                     });
                 </script>
