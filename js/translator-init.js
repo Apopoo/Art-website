@@ -5,59 +5,49 @@
     s.src = "https://cdn.conveythis.com/javascript/conveythis.js";
     s.onload = function() {
 
-        // ✅ Initialisation
+        // Initialisation
         ConveyThis_Init({
             api_key: "pub_fb32793d8c366d7061fceaed2235e734"
         });
 
-        // ✅ Quand ConveyThis est prêt
+        // ConveyThis est prêt
         document.addEventListener("conveythisLoaded", function() {
 
-            // ✅ Connecter TES boutons FR/EN
-            var buttons = document.querySelectorAll(".lang-btn");
-            buttons.forEach(function(btn) {
-                btn.addEventListener("click", function() {
+            console.log("✅ ConveyThis ready");
 
+            // Boutons FR/EN
+            var buttons = document.querySelectorAll(".lang-btn");
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation(); // important !
+                    
                     var lang = this.getAttribute("data-lang");
+                    console.log("Bouton cliqué :", lang);
 
                     if (window.ConveyThis_Translation) {
                         ConveyThis_Translation.switchToLang(lang);
-                        console.log("Changement de langue vers :", lang);
+                        console.log("Langue changée :", lang);
                     } else {
-                        console.error("ConveyThis_Translation introuvable.");
+                        console.error("❌ API non prête !");
                     }
                 });
             });
 
-            // ✅ Cacher le widget ConveyThis
-            function hideConveyThisWidget() {
-                var widget = document.getElementById("conveythis-wrapper");
-                if (widget) {
-                    widget.style.display = "none";
+            // Cacher le widget ConveyThis
+            function hideWidget() {
+                var w = document.getElementById("conveythis-wrapper");
+                if (w) {
+                    w.style.display = "none";
                 } else {
-                    setTimeout(hideConveyThisWidget, 200);
+                    setTimeout(hideWidget, 200);
                 }
             }
-            hideConveyThisWidget();
+            hideWidget();
         });
     };
 
     document.head.appendChild(s);
 
-    // ✅ Gestion du menu SANS utiliser &&
-    document.addEventListener("DOMContentLoaded", function() {
-
-        var toggle = document.getElementById("lang-toggle");
-        var dropdown = document.querySelector(".lang-dropdown");
-
-        // ✅ Version ANTI-ENCODAGE
-        if (toggle !== null) {
-            if (dropdown !== null) {
-                toggle.addEventListener("click", function() {
-                    dropdown.classList.toggle("open");
-                });
-            }
-        }
-    });
-
 })();
+``
